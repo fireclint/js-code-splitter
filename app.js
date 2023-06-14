@@ -1,7 +1,15 @@
 const fs = require('fs');
 const csv = require('csv-parser');
 
-function splitCsv(inputFile, outputDir, rowsPerFile) {
+// Define input file
+const inputFile = '/Users/firebriley/Desktop/nodejs-file-splitter-test/codes.csv';
+// Define output folder
+const outputDir = 'output_files';
+// Rows per file
+const rowsPerFile = 5;
+
+const splitCsv = (inputFile, outputDir, rowsPerFile) => {
+  // Check to see if the output folder already exists
   if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir);
   }
@@ -38,11 +46,8 @@ function splitCsv(inputFile, outputDir, rowsPerFile) {
       }
       console.log('CSV splitting complete.');
     });
-}
+};
 
-// Example usage:
-const inputFile = '/Users/firebriley/Desktop/my-csv-folder/codes.csv';
-const outputDir = 'output_files';
-const rowsPerFile = 5;
+
 
 splitCsv(inputFile, outputDir, rowsPerFile);
