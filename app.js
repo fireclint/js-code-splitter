@@ -2,7 +2,7 @@ const fs = require('fs');
 const csv = require('csv-parser');
 
 // Define input file
-const inputFile = '/Users/firebriley/Desktop/nodejs-file-splitter-test/codes.csv';
+const inputFile = 'file-path-here';
 // Define output folder
 const outputDir = 'output_files';
 // Rows per file
